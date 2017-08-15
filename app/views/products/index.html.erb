@@ -33,6 +33,7 @@
             <td><%= p.url %></td>
             <td><%= p.description %></td>
             <td><%= link_to "Editar", edit_product_path(p) %></td>
+            <td><%= link_to "Eliminar", p, method: :delete, data: {confirm: "Estas seguro de eliminar este producto?"} %></td>
           </tr>
         <% end %>
           
