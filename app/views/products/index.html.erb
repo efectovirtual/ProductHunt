@@ -20,6 +20,8 @@
             <th>Nombre</th>
             <th>Url</th>
             <th>Descripción</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -30,6 +32,7 @@
             <td><%= link_to p.name, p %></td>
             <td><%= p.url %></td>
             <td><%= p.description %></td>
+            <td><%= link_to "Editar", edit_product_path(p) %></td>
           </tr>
         <% end %>
           
