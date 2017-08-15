@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  resources :users, only: [:new, :create]
+
+  resources :products
+
+  root 'products#index' #muestra vista inicial
+
+
+end
+
+
+
   # get '/products', to: 'products#index'
   # get '/products/new', to: 'products#new', as: 'new_product'
 
@@ -12,12 +23,5 @@ Rails.application.routes.draw do
 
   # delete '/products/:id', to: 'products#destroy'
 
-  # resources :products, only[:index] #solamente lista la ruta index
-  # resources :products, except[:index] #lista todas las rutas exepto index
-
-  resources :products
-
-  root 'products#index' #muestra vista inicial
-
-
-end
+  # resources :products, only: [:index] #solamente lista la ruta index
+  # resources :products, except: [:index] #lista todas las rutas exepto index
