@@ -45,9 +45,10 @@ class ProductsController < ApplicationController
     redirect_to products_path, notice: "El producto fue eliminado con exito"
   end
 
+
   private
   def product_params
-    params.require(:product).permit(:name, :url, :description)
+    params.require(:product).permit(:name, :url, :description, :image)
 
   end
   
